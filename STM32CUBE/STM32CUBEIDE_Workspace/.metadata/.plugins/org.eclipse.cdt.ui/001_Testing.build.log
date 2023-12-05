@@ -1,0 +1,17 @@
+04:21:34 **** Incremental Build of configuration Debug for project 001_Testing ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H743xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc -o "001_Testing.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\zafee\Documents\GITHUB\Zafeer_FreeRTOSFromGroundUp\STM32CUBE\STM32CUBEMXProjects\001_Testing\STM32H743ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Testing.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Testing.elf
+ 
+arm-none-eabi-size  001_Testing.elf 
+arm-none-eabi-objdump -h -S 001_Testing.elf  > "001_Testing.list"
+   text	   data	    bss	    dec	    hex	filename
+  40408	    300	  22572	  63280	   f730	001_Testing.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Testing.list
+ 
+
+04:21:37 Build Finished. 0 errors, 0 warnings. (took 3s.889ms)
+
