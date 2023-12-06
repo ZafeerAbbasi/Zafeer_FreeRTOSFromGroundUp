@@ -64,8 +64,8 @@ all: main-build
 main-build: 001_Testing.elf secondary-outputs
 
 # Tool invocations
-001_Testing.elf 001_Testing.map: $(OBJS) $(USER_OBJS) C:\Users\zafee\Documents\GITHUB\Zafeer_FreeRTOSFromGroundUp\STM32CUBE\STM32CUBEMXProjects\001_Testing\STM32H743ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "001_Testing.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\zafee\Documents\GITHUB\Zafeer_FreeRTOSFromGroundUp\STM32CUBE\STM32CUBEMXProjects\001_Testing\STM32H743ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Testing.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+001_Testing.elf 001_Testing.map: $(OBJS) $(USER_OBJS) C:\Users\zafee\Documents\GitHub\Zafeer_FreeRTOSFromGroundUp\STM32CUBE\STM32CUBEMXProjects\001_Testing\STM32H743ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "001_Testing.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\zafee\Documents\GitHub\Zafeer_FreeRTOSFromGroundUp\STM32CUBE\STM32CUBEMXProjects\001_Testing\STM32H743ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Testing.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
