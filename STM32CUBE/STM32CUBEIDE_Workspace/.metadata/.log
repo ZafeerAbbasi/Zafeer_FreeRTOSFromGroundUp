@@ -2442,3 +2442,21 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/z
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-05 02:52:37.384
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-12-05 19:33:02.078 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/zafee/Documents/GitHub/Zafeer_FreeRTOSFromGroundUp/STM32CUBE/STM32CUBEIDE_Workspace
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2023-12-05 19:33:06.019
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://com.genuitec.eclipse.meexplorer/com.genuitec.eclipse.meexplorer.breadcrumb.e4.BreadCrumbContainer
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-05 19:33:06.829
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-05 19:33:06.834
+!MESSAGE Log4j2 initialized with config file C:\Users\zafee\Documents\GitHub\Zafeer_FreeRTOSFromGroundUp\STM32CUBE\STM32CUBEIDE_Workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-05 19:33:14.175
+!MESSAGE Started RMI Server, listening on port 41337
