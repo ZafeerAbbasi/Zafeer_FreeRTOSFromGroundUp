@@ -128,7 +128,7 @@ void StartDefaultTask(void *argument)
     /* Infinite loop */
     for(;;)
     {
-        char *msg = "Hello World! \r\n";
+        char *msg = "Praise be to Allah! \r\n";
         HAL_UART_Transmit( &huart3, ( uint8_t * )msg, strlen( msg ), osWaitForever );
         osDelay( 1000 );
     }
