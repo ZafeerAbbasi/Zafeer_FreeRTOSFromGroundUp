@@ -126,11 +126,13 @@ void StartDefaultTask(void *argument)
 {
     /* USER CODE BEGIN StartDefaultTask */
     /* Infinite loop */
+	char msg[ 50 ];
+	float beast = 655.22;
+	sprintf( msg, "Example Floating Point: %f\r\n", beast);
     for(;;)
     {
-        char *msg = "Hello World! \r\n";
-        HAL_UART_Transmit( &huart3, ( uint8_t * )msg, strlen( msg ), osWaitForever );
-        osDelay( 1000 );
+		HAL_UART_Transmit( &huart3, ( uint8_t * )msg, strlen( msg ), 1000 );
+        osDelay( 500 );
     }
     /* USER CODE END StartDefaultTask */
 }

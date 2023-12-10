@@ -22,6 +22,7 @@
 #include "task.h"
 #include "main.h"
 #include "cmsis_os.h"
+#include <stdint.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -116,7 +117,7 @@ void MX_FREERTOS_Init(void) {
 }
 
 /* USER CODE BEGIN Header_StartDefaultTask */
-/**
+/**u
   * @brief  Function implementing the defaultTask thread.
   * @param  argument: Not used
   * @retval None
@@ -126,11 +127,14 @@ void StartDefaultTask(void *argument)
 {
     /* USER CODE BEGIN StartDefaultTask */
     /* Infinite loop */
-    for(;;)
+    char msg[ 100 ];
+    float beast = 655.22;
+    int x = 5;
+    sprintf( msg, "Example Floating Point: %f\r\n", beast);
+    while( 1 )
     {
-        char *msg = "Praise be to Allah! \r\n";
         HAL_UART_Transmit( &huart3, ( uint8_t * )msg, strlen( msg ), osWaitForever );
-        osDelay( 1000 );
+        osDelay( 500 );
     }
     /* USER CODE END StartDefaultTask */
 }
